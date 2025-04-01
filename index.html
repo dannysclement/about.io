@@ -1,199 +1,328 @@
-<html lang="en">
+<html>
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   E-commerce Website
+   Programmer Portfolio
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <style>
-   /* Custom styles for the mobile menu */
-   .mobile-menu {
-     display: none;
-   }
-   .mobile-menu.active {
-     display: block;
-   }
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
   </style>
  </head>
- <body class="font-roboto bg-gray-100">
+ <body class="bg-gray-100 text-gray-900">
   <!-- Navbar -->
   <nav class="bg-white shadow-lg">
-   <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-    <a class="text-2xl font-bold text-gray-800" href="#">
-     E-Shop
-    </a>
-    <div class="hidden md:flex space-x-4">
-     <a class="text-gray-800 hover:text-gray-600" href="#">
-      Home
-     </a>
-     <a class="text-gray-800 hover:text-gray-600" href="#">
-      Shop
-     </a>
-     <a class="text-gray-800 hover:text-gray-600" href="#">
-      About
-     </a>
-     <a class="text-gray-800 hover:text-gray-600" href="#">
-      Contact
-     </a>
-    </div>
-    <div class="md:hidden">
-     <button class="text-gray-800 focus:outline-none" id="mobile-menu-button">
-      <i class="fas fa-bars">
-      </i>
-     </button>
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+     <div class="flex space-x-7">
+      <div>
+       <a class="flex items-center py-4 px-2" href="#">
+        <img alt="Logo of the programmer's portfolio" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/9aJKFtdn7mWugKPJwxWQ5fR7kW6XlJJJE75qnteVTQ4.jpg" width="50"/>
+        <span class="font-semibold text-gray-500 text-lg">
+         My Portfolio
+        </span>
+       </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#about">
+        About
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#projects">
+        Projects
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#skills">
+        Skills
+       </a>
+       <a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300" href="#contact">
+        Contact
+       </a>
+      </div>
+     </div>
+     <div class="md:hidden flex items-center">
+      <button class="outline-none mobile-menu-button">
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
     </div>
    </div>
-   <div class="mobile-menu md:hidden" id="mobile-menu">
-    <a class="block text-gray-800 hover:text-gray-600 px-4 py-2" href="#">
-     Home
-    </a>
-    <a class="block text-gray-800 hover:text-gray-600 px-4 py-2" href="#">
-     Shop
-    </a>
-    <a class="block text-gray-800 hover:text-gray-600 px-4 py-2" href="#">
-     About
-    </a>
-    <a class="block text-gray-800 hover:text-gray-600 px-4 py-2" href="#">
-     Contact
-    </a>
+   <div class="hidden mobile-menu">
+    <ul class="">
+     <li>
+      <a class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
    </div>
   </nav>
   <!-- Hero Section -->
-  <section class="bg-white py-12">
-   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2">
-     <h1 class="text-4xl font-bold text-gray-800 mb-4">
-      Welcome to E-Shop
-     </h1>
-     <p class="text-gray-600 mb-6">
-      Discover the best products at unbeatable prices. Shop now and enjoy exclusive offers!
-     </p>
-     <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500" href="#">
-      Shop Now
-     </a>
-    </div>
-    <div class="md:w-1/2 mt-8 md:mt-0">
-     <img alt="A variety of products displayed in an attractive manner" height="400" src="https://storage.googleapis.com/a1aa/image/59wKBZTOxLldTm9scoPUtk75WMOk4hTFqc5PiXzbxzk.jpg" width="600"/>
-    </div>
-   </div>
-  </section>
-  <!-- Featured Products -->
-  <section class="py-12">
-   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">
-     Featured Products
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-     <!-- Product 1 -->
-     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img alt="Product 1 image showing a stylish pair of shoes" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/iCtqnjufANfEGU4jj6WpdIP6NAFzhRLJAEIVjniFPE8.jpg" width="300"/>
-      <div class="p-4">
-       <h3 class="text-xl font-bold text-gray-800">
-        Product 1
-       </h3>
-       <p class="text-gray-600 mt-2">
-        $49.99
-       </p>
-       <a class="bg-blue-600 text-white px-4 py-2 rounded mt-4 inline-block hover:bg-blue-500" href="#">
-        Add to Cart
-       </a>
-      </div>
-     </div>
-     <!-- Product 2 -->
-     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img alt="Product 2 image showing a modern smartwatch" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/zwK4inDfrPrX_hXWFVVtUIbWHmWly8DbcHqd-aBf7ss.jpg" width="300"/>
-      <div class="p-4">
-       <h3 class="text-xl font-bold text-gray-800">
-        Product 2
-       </h3>
-       <p class="text-gray-600 mt-2">
-        $199.99
-       </p>
-       <a class="bg-blue-600 text-white px-4 py-2 rounded mt-4 inline-block hover:bg-blue-500" href="#">
-        Add to Cart
-       </a>
-      </div>
-     </div>
-     <!-- Product 3 -->
-     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-      <img alt="Product 3 image showing a sleek laptop" class="w-full h-64 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/QkAXBkXDJpD7H-a9MQ-wwVDEdqv3YdTr3SopPHtX87Q.jpg" width="300"/>
-      <div class="p-4">
-       <h3 class="text-xl font-bold text-gray-800">
-        Product 3
-       </h3>
-       <p class="text-gray-600 mt-2">
-        $999.99
-       </p>
-       <a class="bg-blue-600 text-white px-4 py-2 rounded mt-4 inline-block hover:bg-blue-500" href="#">
-        Add to Cart
-       </a>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Newsletter Section -->
-  <section class="bg-blue-600 py-12">
-   <div class="container mx-auto px-4 text-center text-white">
-    <h2 class="text-3xl font-bold mb-4">
-     Subscribe to our Newsletter
-    </h2>
-    <p class="mb-6">
-     Get the latest updates on new products and upcoming sales
+  <div class="bg-white py-20">
+   <div class="max-w-6xl mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-800">
+     Hello, I'm a Programmer
+    </h1>
+    <p class="mt-4 text-gray-600">
+     I build amazing web applications and love to solve problems with code.
     </p>
-    <form class="flex flex-col md:flex-row justify-center items-center">
-     <input class="w-full md:w-1/3 px-4 py-2 rounded text-gray-800 mb-4 md:mb-0 md:mr-4" placeholder="Enter your email" type="email"/>
-     <button class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200" type="submit">
-      Subscribe
-     </button>
-    </form>
+    <a class="mt-8 inline-block bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300" href="https://wa.me/2348139926868?text=Sir%20I%20want%20to%20build%20a%20website%20for%20my%20business.%20I'm%20into%20affiliate%20marketing%20program%20sir.">
+     Get in Touch
+    </a>
+   </div>
+  </div>
+  <!-- About Section -->
+  <section class="py-20 bg-gray-100" id="about">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center">
+     <h2 class="text-3xl font-bold text-gray-800">
+      About Me
+     </h2>
+     <p class="mt-4 text-gray-600">
+      I am a passionate programmer with experience in various technologies. I love to create and innovate.
+     </p>
+    </div>
+    <div class="mt-10 flex flex-col md:flex-row items-center">
+     <img alt="Portrait of the programmer" class="w-64 h-64 rounded-full mx-auto md:mx-0 md:mr-10" height="300" src="https://storage.googleapis.com/a1aa/image/u20kBUKePBH1reVkn2yAezLKyUH57hbNrfnUbnrAMr8.jpg" width="300"/>
+     <div class="mt-6 md:mt-0">
+      <p class="text-gray-600">
+       I have been working in the tech industry for over 5 years. My expertise lies in full-stack development, and I have a strong background in both front-end and back-end technologies. I am always eager to learn new things and take on new challenges.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Projects Section -->
+  <section class="py-20 bg-white" id="projects">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center">
+     <h2 class="text-3xl font-bold text-gray-800">
+      Projects
+     </h2>
+     <p class="mt-4 text-gray-600">
+      Here are some of the projects I have worked on.
+     </p>
+    </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 1" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/1OqaZ23NsBA9RuUY13zi3abO_tZzAJb91Q4ANTz8oZg.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 1
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 1. This project involves...
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 2" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/6Bg3KU4qSpcH26rNoOiYx3PrfVPwnhj5w7l1yJJIGTE.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 2
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 2. This project involves...
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 3" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/HxexhlI3GQp7Rv367jW8JzgtJwaEODgmSWw6YGFCwHg.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 3
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 3. This project involves...
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 4" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/NBeDWXdRI4s9G2h3mXqDAyFuGlgjKGWwRm78YqSD9Dc.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 4
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 4. This project involves...
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 5" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/Ze8Zo0COj3dzvt9IBGGYUiRN5mY8LVmX4f3VzbRwa1w.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 5
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 5. This project involves...
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <img alt="Screenshot of Project 6" class="w-full h-48 rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/8oLccqKRWpHlTKCK5cns2ZsHIVDcPJAssOXZ3d4Krew.jpg" width="400"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Project 6
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Description of Project 6. This project involves...
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Skills Section -->
+  <section class="py-20 bg-gray-100" id="skills">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center">
+     <h2 class="text-3xl font-bold text-gray-800">
+      Skills
+     </h2>
+     <p class="mt-4 text-gray-600">
+      Here are some of the technologies I am proficient in.
+     </p>
+    </div>
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+     <div class="text-center">
+      <i class="fab fa-html5 text-6xl text-orange-600">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       HTML5
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-css3-alt text-6xl text-blue-600">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       CSS3
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-js-square text-6xl text-yellow-500">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       JavaScript
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-react text-6xl text-blue-500">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       React
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-node text-6xl text-green-500">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Node.js
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-python text-6xl text-blue-400">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Python
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-docker text-6xl text-blue-600">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Docker
+      </h3>
+     </div>
+     <div class="text-center">
+      <i class="fab fa-git-alt text-6xl text-orange-600">
+      </i>
+      <h3 class="mt-4 text-xl font-bold text-gray-800">
+       Git
+      </h3>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="py-20 bg-white" id="contact">
+   <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center">
+     <h2 class="text-3xl font-bold text-gray-800">
+      Contact Me
+     </h2>
+     <p class="mt-4 text-gray-600">
+      Feel free to reach out to me for any inquiries or collaborations.
+     </p>
+    </div>
+    <div class="mt-10 max-w-lg mx-auto">
+     <form action="#" class="bg-gray-100 p-8 rounded-lg shadow-lg" method="POST">
+      <div class="mb-4">
+       <label class="block text-gray-700" for="name">
+        Name
+       </label>
+       <input class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" name="name" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="email">
+        Email
+       </label>
+       <input class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" name="email" type="email"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="message">
+        Message
+       </label>
+       <textarea class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" name="message" rows="4"></textarea>
+      </div>
+      <div class="text-center">
+       <button class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300" type="submit">
+        Send Message
+       </button>
+      </div>
+     </form>
+    </div>
    </div>
   </section>
   <!-- Footer -->
-  <footer class="bg-gray-800 py-8">
-   <div class="container mx-auto px-4 text-white">
-    <div class="flex flex-col md:flex-row justify-between">
-     <div class="mb-4 md:mb-0">
-      <h3 class="text-xl font-bold">
-       E-Shop
-      </h3>
-      <p class="text-gray-400">
-       Your one-stop shop for all your needs.
-      </p>
-     </div>
-     <div class="flex space-x-4">
-      <a class="text-gray-400 hover:text-white" href="#">
-       <i class="fab fa-facebook-f">
-       </i>
-      </a>
-      <a class="text-gray-400 hover:text-white" href="#">
-       <i class="fab fa-twitter">
-       </i>
-      </a>
-      <a class="text-gray-400 hover:text-white" href="#">
-       <i class="fab fa-instagram">
-       </i>
-      </a>
-      <a class="text-gray-400 hover:text-white" href="#">
-       <i class="fab fa-linkedin-in">
-       </i>
-      </a>
-     </div>
-    </div>
-    <div class="mt-8 text-center text-gray-400">
-     © 2023 E-Shop. All rights reserved.
+  <footer class="bg-gray-800 py-6">
+   <div class="max-w-6xl mx-auto px-4 text-center text-white">
+    <p>
+     © 2023 My Portfolio. All rights reserved.
+    </p>
+    <div class="mt-4">
+     <a class="text-white hover:text-gray-400 mx-2" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-400 mx-2" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-400 mx-2" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-400 mx-2" href="#">
+      <i class="fab fa-github">
+      </i>
+     </a>
     </div>
    </div>
   </footer>
   <script>
-   document.getElementById('mobile-menu-button').addEventListener('click', function() {
-     var menu = document.getElementById('mobile-menu');
-     menu.classList.toggle('active');
-   });
+   const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
   </script>
  </body>
 </html>
